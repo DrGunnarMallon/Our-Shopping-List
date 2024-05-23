@@ -57,7 +57,7 @@ ThemeData appTheme = ThemeData(
     shape: RoundedRectangleBorder(
       borderRadius: BorderRadius.circular(4),
     ),
-    margin: const EdgeInsets.only(bottom: 16),
+    margin: const EdgeInsets.only(bottom: 8),
     shadowColor: Colors.transparent,
   ),
 );

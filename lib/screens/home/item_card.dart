@@ -9,10 +9,24 @@ class ItemCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-        child: StyledText(item),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(8),
       ),
+      child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
+          child: Row(children: [
+            ClipRRect(
+              borderRadius:
+                  BorderRadius.circular(8.0), // Adjust the radius as needed
+              child: Image.asset(
+                'assets/images/onions.png',
+                width: 50,
+                colorBlendMode: BlendMode.softLight,
+              ),
+            ),
+            const SizedBox(width: 12),
+            StyledText(item),
+          ])),
     );
   }
 }
